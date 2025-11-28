@@ -15,6 +15,9 @@ A real-time satellite analysis system for monitoring Kenya's forest heritage. Th
 - **Degradation Metrics**: Percentage-based forest loss calculations with severity levels (LOW, MEDIUM, HIGH)
 - **Contact System**: Integrated contact form for user feedback and inquiries
 - **Rate Limiting**: Built-in API rate limiting for resource protection
+- **🌍 Multi-Language Support**: Full internationalization with English and Swahili (Kiswahili) translations
+- **📱 Responsive Design**: Optimized for mobile phones, tablets, and desktop computers with cross-browser compatibility
+- **♿ Accessibility**: Support for high contrast mode, reduced motion preferences, and screen readers
 
 ## 🛠️ Tech Stack
 
@@ -25,6 +28,8 @@ A real-time satellite analysis system for monitoring Kenya's forest heritage. Th
 - **Leaflet** - Map visualization (react-leaflet)
 - **Axios** - HTTP client
 - **Lucide React** - Icons
+- **React i18next** - Internationalization and localization
+- **i18next** - Translation management
 
 ### Backend
 - **Node.js** - Runtime environment
@@ -231,6 +236,25 @@ The system monitors 18 major Kenyan forests:
 - **Analysis Endpoint**: 20 requests per hour per IP (more resource-intensive)
 - Rate limit headers are included in responses
 - Exceeding limits returns HTTP 429 with error message
+
+## 🌍 Multi-Language Support
+
+The application supports full internationalization with:
+- **English**: Default language with comprehensive translations
+- **Swahili (Kiswahili)**: Complete translations for all interface elements
+- **Language Switcher**: Easy language switching in the header
+- **Persistent Selection**: Language preference saved in browser localStorage
+
+## 📱 Responsive Design & Accessibility
+
+- **Mobile-First Approach**: Optimized for phones (320px+), tablets (768px+), and desktops (1024px+)
+- **Cross-Browser Compatibility**: Tested and compatible with modern browsers (Chrome, Firefox, Safari, Edge)
+- **Touch-Friendly**: Optimized for touch interactions on mobile devices
+- **Accessibility Features**:
+  - High contrast mode support
+  - Reduced motion preferences
+  - Screen reader compatibility
+  - Keyboard navigation support
 
 ## 📊 How It Works
 

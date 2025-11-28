@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Home, BarChart3, Calendar, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const AnalysisPage = ({
@@ -18,13 +19,14 @@ const AnalysisPage = ({
   showAnalysis,
   analysisResult,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 pb-4 min-h-[calc(100vh-160px)]">
       {/* Breadcrumb */}
-      <div className="mb-6 flex items-center gap-2 text-green-300">
+      <div className="mb-6 flex items-center gap-2 text-green-300 text-sm sm:text-base">
         <button onClick={onBackToHome} className="hover:text-white flex items-center gap-1">
           <Home className="w-4 h-4" />
-          Home
+          {t('analysis.breadcrumb.home')}
         </button>
         <span>/</span>
         <button onClick={onBackToResults} className="hover:text-white">
@@ -45,23 +47,23 @@ const AnalysisPage = ({
         </div>
 
         {/* Date Selection */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
           <div>
-            <label className="block text-sm font-semibold mb-2 text-green-300">Before Date</label>
+            <label className="block text-sm font-semibold mb-2 text-green-300">{t('analysis.beforeDate')}</label>
             <input
               type="month"
               value={beforeDate}
               onChange={(e) => setBeforeDate(e.target.value)}
-              className="w-full bg-green-900 bg-opacity-40 border border-green-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-green-400"
+              className="w-full bg-green-900 bg-opacity-40 border border-green-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-green-400 text-sm sm:text-base"
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold mb-2 text-green-300">After Date</label>
+            <label className="block text-sm font-semibold mb-2 text-green-300">{t('analysis.afterDate')}</label>
             <input
               type="month"
               value={afterDate}
               onChange={(e) => setAfterDate(e.target.value)}
-              className="w-full bg-green-900 bg-opacity-40 border border-green-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-green-400"
+              className="w-full bg-green-900 bg-opacity-40 border border-green-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-green-400 text-sm sm:text-base"
             />
           </div>
         </div>
@@ -69,17 +71,17 @@ const AnalysisPage = ({
         {/* Image Comparison */}
         {beforeDate && afterDate && (
           <div className="mb-6">
-            <h3 className="text-xl font-bold mb-4">Satellite Image Comparison</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4">{t('analysis.satelliteComparison')}</h3>
             {loadingImages && (
               <div className="text-center py-8">
                 <div className="w-12 h-12 border-4 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-green-300">Loading NASA satellite imagery...</p>
+                <p className="text-green-300">{t('analysis.loadingImages')}</p>
               </div>
             )}
             {!loadingImages && (
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative">
-                  <div className="bg-green-900 bg-opacity-30 border-2 border-green-600 rounded-lg h-48 md:h-64 flex items-center justify-center overflow-hidden">
+                  <div className="bg-green-900 bg-opacity-30 border-2 border-green-600 rounded-lg h-48 sm:h-56 md:h-64 flex items-center justify-center overflow-hidden">
                     {beforeImageUrl ? (
                       <img
                         src={beforeImageUrl}
@@ -87,10 +89,10 @@ const AnalysisPage = ({
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="text-center">
-                        <Calendar className="w-12 h-12 text-green-400 mx-auto mb-2" />
+                      <div className="text-center p-4">
+                        <Calendar className="w-10 h-10 sm:w-12 sm:h-12 text-green-400 mx-auto mb-2" />
                         <p className="text-sm text-green-300">Before: {beforeDate}</p>
-                        <p className="text-xs text-green-400 mt-2">Select dates to load imagery</p>
+                        <p className="text-xs text-green-400 mt-2">{t('analysis.selectDates')}</p>
                       </div>
                     )}
                   </div>
@@ -99,7 +101,7 @@ const AnalysisPage = ({
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="bg-green-900 bg-opacity-30 border-2 border-red-600 rounded-lg h-48 md:h-64 flex items-center justify-center overflow-hidden">
+                  <div className="bg-green-900 bg-opacity-30 border-2 border-red-600 rounded-lg h-48 sm:h-56 md:h-64 flex items-center justify-center overflow-hidden">
                     {afterImageUrl ? (
                       <img
                         src={afterImageUrl}
@@ -107,10 +109,10 @@ const AnalysisPage = ({
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="text-center">
-                        <Calendar className="w-12 h-12 text-red-400 mx-auto mb-2" />
+                      <div className="text-center p-4">
+                        <Calendar className="w-10 h-10 sm:w-12 sm:h-12 text-red-400 mx-auto mb-2" />
                         <p className="text-sm text-green-300">After: {afterDate}</p>
-                        <p className="text-xs text-green-400 mt-2">Select dates to load imagery</p>
+                        <p className="text-xs text-green-400 mt-2">{t('analysis.selectDates')}</p>
                       </div>
                     )}
                   </div>
@@ -128,17 +130,17 @@ const AnalysisPage = ({
           <button
             onClick={handleAnalyze}
             disabled={analyzing}
-            className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold py-4 rounded-lg transition flex items-center justify-center gap-3"
+            className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold py-3 sm:py-4 rounded-lg transition flex items-center justify-center gap-3 text-sm sm:text-base"
           >
             {analyzing ? (
               <>
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                Analyzing with AI...
+                {t('analysis.analyzing')}
               </>
             ) : (
               <>
                 <BarChart3 className="w-5 h-5" />
-                Analyze Forest Degradation
+                {t('analysis.analyzeButton')}
               </>
             )}
           </button>
@@ -147,10 +149,10 @@ const AnalysisPage = ({
 
       {/* Analysis Results */}
       {showAnalysis && analysisResult && (
-        <div className="bg-green-950 bg-opacity-60 backdrop-blur-md border border-green-700 rounded-xl p-8">
-          <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-            <BarChart3 className="w-7 h-7 text-green-400" />
-            AI Analysis Results
+        <div className="bg-green-950 bg-opacity-60 backdrop-blur-md border border-green-700 rounded-xl p-4 sm:p-6 lg:p-8">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
+            <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 text-green-400" />
+            {t('analysis.results.title')}
           </h3>
 
           {/* Degradation Level */}
@@ -159,23 +161,23 @@ const AnalysisPage = ({
               'bg-green-900 border-green-600'
             } bg-opacity-30 border rounded-lg p-6 mb-6`}>
             <div className="flex items-center gap-3 mb-3">
-              <AlertTriangle className={`w-8 h-8 ${analysisResult.lossPct > 20 ? 'text-red-400' :
+              <AlertTriangle className={`w-6 h-6 sm:w-8 sm:h-8 ${analysisResult.lossPct > 20 ? 'text-red-400' :
                 analysisResult.lossPct > 10 ? 'text-yellow-400' :
                   'text-green-400'
                 }`} />
               <div>
-                <h4 className="text-xl font-bold">
-                  Degradation Level: {
+                <h4 className="text-lg sm:text-xl font-bold">
+                  {t('analysis.results.degradationLevel')}: {
                     analysisResult.lossPct > 20 ? 'HIGH' :
                       analysisResult.lossPct > 10 ? 'MEDIUM' :
                         'LOW'
                   }
                 </h4>
-                <p className={`${analysisResult.lossPct > 20 ? 'text-red-300' :
+                <p className={`text-sm sm:text-base ${analysisResult.lossPct > 20 ? 'text-red-300' :
                   analysisResult.lossPct > 10 ? 'text-yellow-300' :
                     'text-green-300'
                   }`}>
-                  Estimated {analysisResult.lossPct.toFixed(2)}% forest cover loss detected
+                  {t('analysis.results.lossDetected', { percentage: analysisResult.lossPct.toFixed(2) })}
                 </p>
               </div>
             </div>
@@ -190,14 +192,14 @@ const AnalysisPage = ({
           {/* Change Detection Map */}
           {analysisResult.changeMap && (
             <div className="mb-6">
-              <h4 className="text-lg font-bold mb-3 text-green-300">Change Detection Map:</h4>
+              <h4 className="text-base sm:text-lg font-bold mb-3 text-green-300">{t('analysis.results.changeMap')}</h4>
               <div className="bg-green-900 bg-opacity-20 p-4 rounded-lg">
                 <img
                   src={`data:image/png;base64,${analysisResult.changeMap}`}
                   alt="Change detection map"
                   className="w-full rounded-lg"
                 />
-                <p className="text-sm text-green-300 mt-2">Darker areas indicate vegetation loss</p>
+                <p className="text-sm text-green-300 mt-2">{t('analysis.results.darkerAreas')}</p>
               </div>
             </div>
           )}
@@ -205,8 +207,8 @@ const AnalysisPage = ({
           {/* Before/After Images */}
           {(analysisResult.before || analysisResult.after) && (
             <div className="mb-6">
-              <h4 className="text-lg font-bold mb-3 text-green-300">Satellite Imagery Comparison:</h4>
-              <div className="grid md:grid-cols-2 gap-4">
+              <h4 className="text-base sm:text-lg font-bold mb-3 text-green-300">{t('analysis.results.satelliteComparison')}</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {analysisResult.before && (
                   <div>
                     <p className="text-sm text-green-300 mb-2">Before: {beforeDate}</p>
@@ -233,31 +235,31 @@ const AnalysisPage = ({
 
           {/* Recommendations */}
           <div>
-            <h4 className="text-lg font-bold mb-3 text-green-300">Recommendations:</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-3 text-green-300">{t('analysis.results.recommendations')}</h4>
             <div className="space-y-3">
               {analysisResult.lossPct > 15 && (
                 <div className="flex items-start gap-3 bg-blue-900 bg-opacity-20 p-4 rounded-lg border border-blue-700">
-                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold">Immediate Intervention Required</p>
-                    <p className="text-sm text-green-200">Deploy forest rangers to identified hotspot areas to prevent further illegal logging</p>
+                    <p className="font-semibold">{t('analysis.results.immediateIntervention')}</p>
+                    <p className="text-sm text-green-200">{t('analysis.results.interventionDesc')}</p>
                   </div>
                 </div>
               )}
               {analysisResult.lossPct > 5 && (
                 <div className="flex items-start gap-3 bg-blue-900 bg-opacity-20 p-4 rounded-lg border border-blue-700">
-                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold">Reforestation Program</p>
-                    <p className="text-sm text-green-200">Initiate tree planting initiatives focusing on indigenous species to restore degraded areas</p>
+                    <p className="font-semibold">{t('analysis.results.reforestation')}</p>
+                    <p className="text-sm text-green-200">{t('analysis.results.reforestationDesc')}</p>
                   </div>
                 </div>
               )}
               <div className="flex items-start gap-3 bg-blue-900 bg-opacity-20 p-4 rounded-lg border border-blue-700">
-                <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold">Community Engagement</p>
-                  <p className="text-sm text-green-200">Establish community forest management programs and alternative livelihood initiatives</p>
+                  <p className="font-semibold">{t('analysis.results.communityEngagement')}</p>
+                  <p className="text-sm text-green-200">{t('analysis.results.communityDesc')}</p>
                 </div>
               </div>
             </div>

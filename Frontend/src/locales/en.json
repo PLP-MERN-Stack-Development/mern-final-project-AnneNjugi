@@ -1,0 +1,99 @@
+{
+  "app": {
+    "title": "Kenya Forest Monitor",
+    "subtitle": "Real-time satellite analysis for monitoring Kenya's forest heritage"
+  },
+  "navigation": {
+    "home": "Home",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "landing": {
+    "heroTitle": "Monitor Kenya's Forest Heritage",
+    "heroSubtitle": "Track deforestation patterns using advanced satellite imagery and AI analysis",
+    "heroDescription": "Our platform provides real-time monitoring of Kenya's precious forests. Select a region below to view detailed satellite comparisons and receive AI-powered insights on forest health and degradation levels.",
+    "selectRegion": "Select a Region to Begin",
+    "regions": {
+      "all": "All Regions",
+      "nairobi": "Nairobi",
+      "central": "Central",
+      "riftValley": "Rift Valley",
+      "western": "Western",
+      "eastern": "Eastern",
+      "coast": "Coast",
+      "northEastern": "North Eastern",
+      "nyanza": "Nyanza"
+    },
+    "features": {
+      "forests": {
+        "title": "18 Forests",
+        "description": "Comprehensive coverage of major Kenyan forests across all regions"
+      },
+      "analysis": {
+        "title": "AI Analysis",
+        "description": "Advanced algorithms detect degradation and provide actionable insights"
+      },
+      "comparison": {
+        "title": "Time Comparison",
+        "description": "Compare satellite imagery across different time periods"
+      }
+    }
+  },
+  "analysis": {
+    "breadcrumb": {
+      "home": "Home",
+      "analysis": "Analysis"
+    },
+    "forestInfo": "Forest Information",
+    "beforeDate": "Before Date",
+    "afterDate": "After Date",
+    "satelliteComparison": "Satellite Image Comparison",
+    "loadingImages": "Loading NASA satellite imagery...",
+    "selectDates": "Select dates to load imagery",
+    "analyzeButton": "Analyze Forest Degradation",
+    "analyzing": "Analyzing with AI...",
+    "results": {
+      "title": "AI Analysis Results",
+      "degradationLevel": "Degradation Level",
+      "lossDetected": "Estimated {{percentage}}% forest cover loss detected",
+      "changeMap": "Change Detection Map:",
+      "darkerAreas": "Darker areas indicate vegetation loss",
+      "satelliteComparison": "Satellite Imagery Comparison:",
+      "recommendations": "Recommendations:",
+      "immediateIntervention": "Immediate Intervention Required",
+      "interventionDesc": "Deploy forest rangers to identified hotspot areas to prevent further illegal logging",
+      "reforestation": "Reforestation Program",
+      "reforestationDesc": "Initiate tree planting initiatives focusing on indigenous species to restore degraded areas",
+      "communityEngagement": "Community Engagement",
+      "communityDesc": "Establish community forest management programs and alternative livelihood initiatives"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our forest monitoring team",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "about": "About",
+    "aboutDesc": "Advanced satellite monitoring system for Kenya's forests",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 Kenya Forest Monitor. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  }
+}

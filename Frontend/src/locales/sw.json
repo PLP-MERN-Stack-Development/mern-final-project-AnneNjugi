@@ -1,0 +1,99 @@
+{
+  "app": {
+    "title": "Mfuatiliaji wa Misitu ya Kenya",
+    "subtitle": "Uchambuzi wa satelaiti wa wakati halisi kwa ajili ya kufuatilia urithi wa misitu ya Kenya"
+  },
+  "navigation": {
+    "home": "Nyumbani",
+    "contact": "Wasiliana",
+    "language": "Lugha"
+  },
+  "landing": {
+    "heroTitle": "Fuatilia Urithi wa Misitu ya Kenya",
+    "heroSubtitle": "Fuatilia mifumo ya ukataji miti kwa kutumia picha za satelaiti za hali ya juu na uchambuzi wa AI",
+    "heroDescription": "Jukwaa letu linatoa ufuatiliaji wa wakati halisi wa misitu ya thamani ya Kenya. Chagua eneo hapa chini ili kuona ulinganisho wa kina wa satelaiti na kupokea maarifa ya nguvu ya AI kuhusu afya ya misitu na viwango vya uharibifu.",
+    "selectRegion": "Chagua Eneo Ili Kuanza",
+    "regions": {
+      "all": "Mikoa Yote",
+      "nairobi": "Nairobi",
+      "central": "Kati",
+      "riftValley": "Boniface Rift",
+      "western": "Magharibi",
+      "eastern": "Mashariki",
+      "coast": "Pwani",
+      "northEastern": "Kaskazini Mashariki",
+      "nyanza": "Nyanza"
+    },
+    "features": {
+      "forests": {
+        "title": "Misitu 18",
+        "description": "Ufunikaji wa kina wa misitu kuu ya Kenya katika mikoa yote"
+      },
+      "analysis": {
+        "title": "Uchambuzi wa AI",
+        "description": "Algoriti za hali ya juu hugundua uharibifu na kutoa maarifa ya vitendo"
+      },
+      "comparison": {
+        "title": "Ulinganisho wa Wakati",
+        "description": "Linganisha picha za satelaiti katika vipindi tofauti vya wakati"
+      }
+    }
+  },
+  "analysis": {
+    "breadcrumb": {
+      "home": "Nyumbani",
+      "analysis": "Uchambuzi"
+    },
+    "forestInfo": "Taarifa za Msitu",
+    "beforeDate": "Tarehe ya Kabla",
+    "afterDate": "Tarehe ya Baada",
+    "satelliteComparison": "Ulinganisho wa Picha za Satelaiti",
+    "loadingImages": "Inapakia picha za satelaiti za NASA...",
+    "selectDates": "Chagua tarehe ili kupakia picha",
+    "analyzeButton": "Chambua Uharibifu wa Msitu",
+    "analyzing": "Inachambua na AI...",
+    "results": {
+      "title": "Matokeo ya Uchambuzi wa AI",
+      "degradationLevel": "Kiwango cha Uharibifu",
+      "lossDetected": "Inakadiriwa {{percentage}}% ya uharibifu wa msitu umegunduliwa",
+      "changeMap": "Ramani ya Kugundua Mabadiliko:",
+      "darkerAreas": "Maeneo meusi yanaonyesha uharibifu wa mimea",
+      "satelliteComparison": "Ulinganisho wa Picha za Satelaiti:",
+      "recommendations": "Mapendekezo:",
+      "immediateIntervention": "Hatua za Haraka Zinahitajika",
+      "interventionDesc": "Tuma askari wa misitu katika maeneo ya moto yaliyotambuliwa ili kuzuia ukataji miti haramu",
+      "reforestation": "Mpango wa Kupanda Miti",
+      "reforestationDesc": "Anzisha mipango ya kupanda miti inayolenga spishi za asili ili kurejesha maeneo yaliyoharibiwa",
+      "communityEngagement": "Ushiriki wa Jamii",
+      "communityDesc": "Weka mipango ya usimamizi wa misitu ya jamii na mipango mbadala ya kujipatia riziki"
+    }
+  },
+  "contact": {
+    "title": "Wasiliana Nasi",
+    "subtitle": "Wasiliana na timu yetu ya ufuatiliaji wa misitu",
+    "name": "Jina",
+    "email": "Barua pepe",
+    "message": "Ujumbe",
+    "send": "Tuma Ujumbe",
+    "sending": "Inatuma...",
+    "success": "Ujumbe umetumwa kwa mafanikio!",
+    "error": "Imeshindwa kutuma ujumbe. Tafadhali jaribu tena."
+  },
+  "footer": {
+    "about": "Kuhusu",
+    "aboutDesc": "Mfumo wa hali ya juu wa ufuatiliaji wa satelaiti kwa misitu ya Kenya",
+    "quickLinks": "Viungo vya Haraka",
+    "contact": "Wasiliana",
+    "privacy": "Sera ya Faragha",
+    "terms": "Masharti ya Huduma",
+    "copyright": "© 2024 Mfuatiliaji wa Misitu ya Kenya. Haki zote zimehifadhiwa."
+  },
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Hitilafu imetokea",
+    "retry": "Jaribu tena",
+    "close": "Funga",
+    "submit": "Wasilisha",
+    "cancel": "Ghairi"
+  }
+}
