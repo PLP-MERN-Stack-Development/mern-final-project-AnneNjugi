@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const BASE = import.meta.env.VITE_API_URL || "";
 
 // Fetch GIBS image for a specific forest and date
 export const fetchGibs = (forest, date) =>

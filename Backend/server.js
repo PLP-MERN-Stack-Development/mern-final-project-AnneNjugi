@@ -12,8 +12,12 @@ import contactRouter from "./routes/contact.js";
 
 dotenv.config();
 
-// 🔥 CONNECT TO MONGODB AT STARTUP
-connectDB();
+// 🔥 CONNECT TO MONGODB AT STARTUP (optional for forests endpoint)
+try {
+  connectDB();
+} catch (error) {
+  console.log('MongoDB connection failed, but continuing without it for forests endpoint');
+}
 
 const app = express();
 
@@ -54,7 +58,7 @@ app.use("/api/images", imagesRouter);
 app.use("/api/analysis", analysisLimiter, analysisRouter);
 app.use("/api/contact", contactRouter);
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.listen(PORT, () => {
   logInfo(`Server running on port ${PORT}`);
